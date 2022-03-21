@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+<div>
+  <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+
+
+</div>
+
+
 </body>
+<script>
+  function Ban_kinh(x, y, ban_kinh) {
+    this.x = x;
+    this.y = y;
+    this.ban_kinh = ban_kinh;
+  }
+  function createdBan_kinh() {
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let vong_tron = new Ban_kinh(500, 500, 80);
+    ctx.beginPath();
+    ctx.arc(vong_tron.x, vong_tron.y, vong_tron.ban_kinh, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+  createdBan_kinh();
+</script>
 </html>
