@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class NHIET_DO {
+        Do_C;
+        C_F;
+        C_Kenvin;
+
+        constructor(Do_C, D_F, C_Kenvin) {
+            this.Do_C = Do_C;
+            this.C_F = D_F;
+            this.C_Kenvin = C_Kenvin;
+        }
+
+        tinhC_F() {
+            return this.Do_C * 9/5 + 32;
+        }
+
+        tinhC_Kenvin() {
+            return this.Do_C + 273.15;
+        }
+    }
+    let display = new NHIET_DO();
+    display.Do_C = 6;
+    document.write("chuyển đổi từ độ C sang độ F = " + display.tinhC_F() + "<br>");
+    document.write("chuyển đổi từ độ C sang độ Kenvin = " + display.tinhC_Kenvin());
+</script>
+</body>
+</html>
