@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<script>
+    class HCN {
+        cd;
+        cr;
+        mau;
+        x;
+        y;
+
+        constructor(cd,cr,mau,x,y) {
+            this.cd = cd;
+            this.cr = cr;
+            this.mau = mau;
+            this.x = x;
+            this.y =y;
+        }
+
+        tinhCV() {
+            return(this.cd + this.cr)*2;
+        }
+        tinhDT() {
+            return this.cd*this.cr;
+        }
+        ve () {
+            let ctx = document.getElementById('DemoCanvas').getContext('2d');
+            ctx.beginPath();
+            ctx.fillStyle = this.mau;
+            ctx.fillRect(this.x,this.y,this.cd,this.cr);
+            ctx.closePath();
+        }
+    }
+    let h1 = new HCN(300,300,"red",10,10);
+    h1.ve();
+/*    let h1 = new HCN();
+    h1.cd = 300;
+    h1.cr = 300;
+    h1.x = 10;
+    h1.y = 10;
+    h1.mau = "black";
+    h1.ve();*/
+</script>
 </body>
 </html>
